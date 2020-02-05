@@ -1,8 +1,34 @@
 import * as Yup from  'yup';
+import { startOfHour, parseISO, isBefore, format, subHours} from 'date-fns';
 import User from '../models/User';
+import File from '../models/File';
 import Appointment from '../models/Appointment';
 
 class AppointmentController {
+  async index(req, res) {
+    const appointments = await Appointment.findAll({
+        where: { user_id: req.userId, canceled_at: null },
+        order: ['date'],
+        attributes: ['id', 'date'],
+        include: [
+            {
+                model: User,
+                as: 'provider',
+                attributes: ['id', 'name'],
+                include: [
+                    {
+                        model: File,
+                        as: 'avatar',
+                        attributes: ['id', 'path', 'url'],
+                    },
+                ],
+            },
+        ],
+    });
+
+    return res.json(appointments);
+}
+
     async store(req, res) {
         const schema = Yup.object().shape({
             provider_id: Yup.number().required(),
@@ -27,10 +53,32 @@ class AppointmentController {
             .json({ error: 'You Can Only Create Appointments With Providers'});
         }
 
+        //checking if the Appointment is a Past Date
+
+        const hourStart = startOfHour(parseISO(date));
+
+        if (isBefore(hourStart, new Date())) {
+            return res.status(400).json({ error: 'Past Dates Are Not Permited' });
+        }
+
+         //checking if the Hour is Available
+
+         const checkAvailability = await Appointment.findOne({
+          where: {
+              provider_id,
+              canceled_at: null,
+              date:hourStart,
+          },
+      });
+
+      if(checkAvailability) {
+          return res.status(400).json({ error: 'Appointment Hour Is Not Available' });
+      }
+
         const appointment = await Appointment.create({
           user_id: req.userId,
           provider_id,
-          date,
+          date:hourStart,
       });
 
         return res.json(appointment);
