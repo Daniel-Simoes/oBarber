@@ -23,9 +23,8 @@ class Database {
         .map(model => model.associate && model.associate(this.connection.models));
     }
     mongo(){
-      this.mongoConnection = mongoose.connect(
-          'mongodb://localhost:27017/obarber',
-          { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: true });
+      this.mongoConnection = mongoose.connect(process.env.MONGO_URL,{
+        useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: true, });
   }
 }
 
