@@ -39,7 +39,7 @@ export const Wrapper = styled.div`
     }
 
     span {
-
+        color: rgba(255, 255, 255, 0.5);
       align-self: flex-start;
       margin: 0 0 10px;
       font-weight: bold;
