@@ -14,11 +14,11 @@ import GlobalStyle from './styles/global';
 function App() {
   return (
       <Provider store={store}>
-  <Router history={history}>
-    <Routes />
-    <GlobalStyle />
-  </Router>
-  </Provider>
+        <Router history={history}>
+            <Routes />
+            <GlobalStyle />
+        </Router>
+      </Provider>
   );
 }
 

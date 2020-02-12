@@ -24,7 +24,7 @@ export default function SignIn() {
   return (
     <>
       <img src={logo} alt="oBarber"/>
-      <Form onSubmit={handleSubmit} schema={schema}>
+      <Form schema={schema} onSubmit={handleSubmit}>
         <Input name= "email" type="email" placeholder="Email" />
         <Input name= "password" type="password" placeholder="Password"
         />
