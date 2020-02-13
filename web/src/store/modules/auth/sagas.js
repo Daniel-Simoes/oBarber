@@ -26,7 +26,7 @@ export function* signIn({ payload }) {
         yield put(signInSuccess(token, user));
 
         history.push('/dashboard');
-      } catch (err) {
+      } catch (error) {
         toast.error('Authentication Failed, Check your email or password');
         yield put(signFailure());
       }
@@ -43,7 +43,7 @@ export function* signIn({ payload }) {
           });
 
           history.push('/');
-        } catch (err) {
+        } catch (error) {
           toast.error('Sign Up Failed, Check your email or password');
           yield put(signFailure());
         }
