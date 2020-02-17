@@ -20,7 +20,8 @@ export const Container = styled.div`
       margin: 0 0 10px;
 
       &::placeholder {
-        background: rgba(255, 255, 255, 0.7);
+        color:#FFF;
+        background: ;
       }
 
       &:focus {
