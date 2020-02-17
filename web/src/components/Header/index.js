@@ -22,12 +22,12 @@ export default function Header() {
             <Notifications />
           <Profile>
             <div>
-              <strong>Test</strong>
+              <strong>Daniel Simões</strong>
               <Link to="/profile">My Profile</Link>
             </div>
             <img
               src= "https://api.adorable.io/avatars/50/abott@adorable.png"
-              alt="Test"
+              alt="Daniel Simões"
             />
           </Profile>
         </aside>
