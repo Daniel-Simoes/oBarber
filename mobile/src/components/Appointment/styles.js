@@ -4,12 +4,12 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
   margin-bottom: 15px;
   padding: 25px;
-  border-radius: 7px;
-  background: #FFF;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.3);
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  opacity: ${props => (props.past ? 0.6 : 1)};
+  opacity: ${props => (props.past ? 0.5 : 1)};
 `;
 
 export const Left = styled.View`
@@ -29,13 +29,13 @@ export const Info = styled.View`
 
 export const Time = styled.Text`
   font-weight: bold;
-  font-size: 13px;
-  color: #999;
+  font-size: 12px;
+  color: #AAA;
 `;
 
 export const Name = styled.Text`
 font-weight: bold;
   margin-top: 4px;
-  font-size: 14px;
-  color: #333;
+  font-size: 16px;
+  color: #FFF;
 `;
