@@ -40,7 +40,6 @@ export function* signIn({ payload }) {
             name,
             email,
             password,
-            provider: true,
           });
 
           //history.push('/');
