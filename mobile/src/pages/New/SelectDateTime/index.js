@@ -1,10 +1,12 @@
 import React from 'react';
-import { View } from 'react-native';
 
-// import { Container } from './styles';
+
+import Background from '../../../components/Background';
 
 export default function SelectDateTime() {
-  return (
-    <View />
-  );
+  return <Background/>;
 }
+
+SelectDateTime.navigationOptions = {
+  title: 'Schedule',
+};
