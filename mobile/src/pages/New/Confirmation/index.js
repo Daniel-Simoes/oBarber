@@ -4,11 +4,12 @@ import pt from 'date-fns/locale/pt';
 import { TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
+import api from '../../../services/api';
 
 import Background from '../../../components/Background';
 import { Container, Avatar, Name, Time, SubmitButton } from './styles';
 
-import api from '../../../services/api';
+
 
 export default function Confirm({ navigation }) {
   const provider = navigation.getParam('provider');
