@@ -13,9 +13,9 @@ export const Separator = styled.View`
   margin: 20px 0 30px;
 `;
 
-export const LoggoutButton = styled(Button)`
+export const LogoutButton = styled(Button)`
   margin-top: 10px;
-  background: #BBB;
+  background: #1fc9FD;
 `;
 
 export const Title = styled.Text`

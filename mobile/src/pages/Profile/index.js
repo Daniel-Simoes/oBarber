@@ -4,8 +4,9 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import Background from '../../components/Background';
 import { updateProfileRequest } from '../../store/modules/user/actions';
+import { signOut } from '~/store/modules/auth/actions';
 
-import { FormInput, Separator, Container, LoggoutButton, Title, Form, } from './styles';
+import { FormInput, Separator, Container, LogoutButton, Title, Form, } from './styles';
 
 import { SubmitButton } from '../SignIn/styles';
 
@@ -41,6 +42,10 @@ export default function Profile() {
         confirmPassword,
       })
     );
+  }
+
+  function handleLogout() {
+    dispatch(signOut());
   }
 
   return (<Background>
@@ -101,6 +106,7 @@ export default function Profile() {
                   placeholder="Confirm the Password"
                 />
                 <SubmitButton onPress={handleSubmit}>Update Profile</SubmitButton>
+                <LogoutButton onPress={handleLogout}>Sign Out</LogoutButton>
               </Form>
             </Container>
           </Background>
