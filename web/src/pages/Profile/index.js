@@ -23,27 +23,18 @@ export default function Profile() {
         <Container>
             <Form initialData={profile} onSubmit={handleSubmit}>
                 <AvatarInput name="avatar_id" />
-                <Input name="name" placeholder="Seu nome incrível" />
-                <Input
-                    name="email"
-                    placeholder="Seu endereço de e-mail massa"
-                />
+                <Input name="name" placeholder="name" />
+                <Input name="email" placeholder="email" />
                 <hr />
-                <Input name="oldPassword" placeholder="Sua senha atual" />
-                <Input
-                    name="password"
-                    placeholder="Sua nova senha totalmente complexa"
-                />
-                <Input
-                    name="confirmPassword"
-                    placeholder="Confirmação da sua nova senha"
-                />
+                <Input name="oldPassword" placeholder="old password" />
+                <Input name="password" placeholder="new password" />
+                <Input name="confirmPassword" placeholder="confirm password" />
 
-                <button type="submit">Atualizar meu super perfil</button>
+                <button type="submit">Update Profile</button>
             </Form>
 
             <button type="button" onClick={handleSignOut}>
-                Sair do GoBarber
+                Logout
             </button>
         </Container>
     );

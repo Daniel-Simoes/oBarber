@@ -10,7 +10,8 @@ export const Badge = styled.button`
     background: none;
     border: 0;
     position: relative;
-
+    margin-top: 6px;
+    margin-right: -20px;
     ${props =>
         props.hasUnread &&
         css`
@@ -20,11 +21,11 @@ export const Badge = styled.button`
                 top: 0;
                 width: 8px;
                 height: 8px;
-                background: #ff892e;
+                background: #f64c75;
                 content: '';
                 border-radius: 50%;
             }
-        `}
+        `};
 `;
 
 export const NotificationList = styled.div`
@@ -32,7 +33,7 @@ export const NotificationList = styled.div`
     width: 260px;
     left: calc(50% - 130px);
     top: calc(100% + 30px);
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 4px;
     padding: 15px 5px;
     display: ${props => (props.visible ? 'block' : 'none')};
@@ -46,7 +47,7 @@ export const NotificationList = styled.div`
         height: 0;
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
-        border-bottom: 20px solid rgba(0, 0, 0, 0.4);
+        border-bottom: 20px solid rgba(0, 0, 0, 0.5);
     }
 `;
 export const Scroll = styled(PerfectScrollbar)`
@@ -60,7 +61,7 @@ export const Notification = styled.div`
     & + div {
         margin-top: 15px;
         padding-top: 15px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.9);
     }
 
     p {
@@ -79,7 +80,8 @@ export const Notification = styled.div`
         font-size: 12px;
         border: 0;
         background: none;
-        color: ${lighten(0.2, '#7159c1')} '';
+        color: '#FFF';
+        color: ${lighten(0.2, '#7159c1')} '#FFF';
     }
 
     ${props =>

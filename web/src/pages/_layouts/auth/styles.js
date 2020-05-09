@@ -20,8 +20,8 @@ export const Content = styled.div`
         margin-top: -330px;
 
         input {
-            background: rgba(0, 0, 0, 0.6);
-            border: 1px solid rgb(37, 36, 44);
+            background: rgba(0, 0, 0, 0.2);
+            border: 0;
             border-radius: 4px;
             height: 50px;
             padding: 0 15px;
@@ -30,7 +30,7 @@ export const Content = styled.div`
             transition: border 0.2s;
 
             &::placeholder {
-                color: rgba(255, 255, 255, 0.1);
+                color: rgba(255, 255, 255, 0.5);
             }
 
             &:focus {
@@ -47,7 +47,7 @@ export const Content = styled.div`
         button {
             margin: 5px 0 0;
             height: 50px;
-            background: #3d9eff;
+            background: #fc0061;
             font-weight: bold;
             color: #fff;
             border: 0;
@@ -56,7 +56,7 @@ export const Content = styled.div`
             transition: border 0.2s;
 
             &:hover {
-                background: ${darken(0.03, '#3d9eff')};
+                background: ${darken(0.03, '#fc0061')};
             }
         }
 

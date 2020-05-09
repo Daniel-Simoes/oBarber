@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { MdNotifications } from 'react-icons/md';
 import { formatDistance, parseISO } from 'date-fns';
-import pt from 'date-fns/locale/pt';
+// import pt from 'date-fns/locale/pt';
 
 import api from '~/services/api';
 
@@ -31,7 +31,10 @@ export default function Notifications() {
                 timeDistance: formatDistance(
                     parseISO(notification.createdAt),
                     new Date(),
-                    { addSuffix: true, locale: pt }
+                    {
+                        addSuffix: true,
+                        // locale: pt
+                    }
                 ),
             }));
 
@@ -60,7 +63,7 @@ export default function Notifications() {
     return (
         <Container>
             <Badge onClick={handleToggleVisible} hasUnread={hasUnread}>
-                <MdNotifications color="#999" size={20} />
+                <MdNotifications color="#CD950C" size={20} />
             </Badge>
 
             <NotificationList visible={visible}>

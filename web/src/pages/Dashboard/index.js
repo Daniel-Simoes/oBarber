@@ -11,7 +11,7 @@ import {
     isEqual,
     parseISO,
 } from 'date-fns';
-import pt from 'date-fns/locale/pt';
+// import pt from 'date-fns/locale/pt';
 import { utcToZonedTime } from 'date-fns-tz';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import api from '~/services/api';
@@ -25,7 +25,12 @@ export default function Dashboard() {
     const [date, setDate] = useState(new Date());
 
     const dateFormatted = useMemo(
-        () => format(date, "d 'de' MMMM", { locale: pt }),
+        () =>
+            format(
+                date,
+                "d 'of' MMMM"
+                // { locale: pt }
+            ),
         [date]
     );
 
@@ -71,11 +76,11 @@ export default function Dashboard() {
         <Container>
             <header>
                 <button type="button" onClick={handlePrevDay}>
-                    <MdChevronLeft size={36} color="#fff" />
+                    <MdChevronLeft size={36} color="rgba(0, 0, 0, 0.3)" />
                 </button>
                 <strong>{dateFormatted}</strong>
                 <button type="button" onClick={handleNextDay}>
-                    <MdChevronRight size={36} color="#fff" />
+                    <MdChevronRight size={36} color="rgba(0, 0, 0, 0.3)" />
                 </button>
             </header>
 
@@ -90,7 +95,7 @@ export default function Dashboard() {
                         <span>
                             {time.appointment
                                 ? time.appointment.user.name
-                                : 'Em aberto'}
+                                : 'Avaliable'}
                         </span>
                     </Time>
                 ))}

@@ -17,7 +17,7 @@ export const Container = styled.div`
         }
 
         strong {
-            color: #fff;
+            color: rgba(0, 0, 0, 0.5);
             font-size: 24px;
             margin: 0 15px;
         }
@@ -35,20 +35,20 @@ export const Time = styled.li`
     justify-content: space-between;
     align-items: center;
     border-radius: 4px;
-    background: rgba(0, 0, 0, 0.3);
-    opacity: ${props => (props.past ? 0.6 : 1)};
+    background: rgba(0, 0, 0, 0.2);
+    opacity: ${props => (props.past ? 0.3 : 1)};
 
     strong {
         display: block;
-        color: ${props => (props.available ? '#666' : '#7159c1')};
+        color: ${props => (props.available ? 'rgba(00,00, 00, 0.5)' : '#999')};
         font-size: 20px;
-        font-weight: normal;
+        font-weight: bold;
     }
 
     span {
         display: block;
         margin-top: 3px;
-        color: ${props => (props.available ? '#9BCD' : '#FF6347')};
+        color: ${props => (props.available ? 'rgba(00,00, 00, 0.3)' : '#999')};
     }
 
     img {

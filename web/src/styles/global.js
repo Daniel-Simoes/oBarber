@@ -13,9 +13,9 @@ export default createGlobalStyle`
   }
 
   img{
-      width:200px;
-      height:150px;
-    margin-bottom:350px
+      width:130px;
+      height:100px;
+    margin-bottom:370px
 
 
   }

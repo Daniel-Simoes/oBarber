@@ -14,44 +14,47 @@ export default function AvatarInput() {
 
     useEffect(() => {
         if (ref.current) {
-          registerField({
-            name: 'avatar_id',
-            ref: ref.current,
-            path: 'dataset.file',
-          });
+            registerField({
+                name: 'avatar_id',
+                ref: ref.current,
+                path: 'dataset.file',
+            });
         }
       }, [ref.registerField]); // eslint-disable-line
 
-  async function handleChange(e) {
-    const data = new FormData();
+    async function handleChange(e) {
+        const data = new FormData();
 
-    data.append('file', e.target.files[0]);
+        data.append('file', e.target.files[0]);
 
-    const response = await api.post('files', data);
+        const response = await api.post('files', data);
 
-    const { id, url } = response.data;
+        const { id, url } = response.data;
 
-    setFile(id);
-    setPreview(url);
-  }
+        setFile(id);
+        setPreview(url);
+    }
 
-  return (
-    <Container>
-      <label htmlFor="avatar">
-        <img
-          src={preview || "https://api.adorable.io/avatars/50/abott@adorable.png"}
-          alt=""
-        />
+    return (
+        <Container>
+            <label htmlFor="avatar">
+                <img
+                    src={
+                        preview ||
+                        'https://api.adorable.io/avatars/50/abott@adorable.png'
+                    }
+                    alt=""
+                />
 
-        <input
-          type="file"
-          id="avatar"
-          accept="image/*"
-          data-file={file}
-          onChange={handleChange}
-          ref={ref}
-        />
-      </label>
-    </Container>
-  );
+                <input
+                    type="file"
+                    id="avatar"
+                    accept="image/*"
+                    data-file={file}
+                    onChange={handleChange}
+                    ref={ref}
+                />
+            </label>
+        </Container>
+    );
 }
