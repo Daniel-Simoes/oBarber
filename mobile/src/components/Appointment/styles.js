@@ -4,7 +4,7 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
   margin-bottom: 15px;
   padding: 25px;
-  border-radius: 30px;
+  border-radius: 8px;
   background: rgba(0, 0, 0, 0.3);
   flex-direction: row;
   align-items: center;
@@ -30,12 +30,13 @@ export const Info = styled.View`
 export const Time = styled.Text`
   font-weight: bold;
   font-size: 12px;
-  color: #AAA;
+  color: #888;
+  padding-top: 3px;
 `;
 
 export const Name = styled.Text`
 font-weight: bold;
   margin-top: 4px;
-  font-size: 16px;
-  color: #FFF;
+  font-size: 17px;
+  color: #111;
 `;

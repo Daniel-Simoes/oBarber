@@ -45,7 +45,7 @@ export default function SelectProvider({ navigation }) {
   }
 
   SelectProvider.navigationOptions = ({ navigation }) => ({
-    title: 'Selecione o prestador',
+    title: 'Hair Stylist',
     headerLeft: () => (
       <TouchableOpacity onPress={() => {
         navigation.navigate('Dashboard');

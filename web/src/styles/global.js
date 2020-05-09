@@ -12,6 +12,14 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  img{
+      width:200px;
+      height:150px;
+    margin-bottom:350px
+
+
+  }
+
   *:focus {
     outline: 0;
   }

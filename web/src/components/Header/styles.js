@@ -2,37 +2,37 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     height: 64px;
-    background: #fff;
+    background: rgba(0, 0, 0, 0.2);
     padding: 0 30px;
 `;
 
 export const Content = styled.div`
-    height: 64px;
-    max-width: 1000px;
+    height: 68px;
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
     nav {
         display: flex;
-        align-items: center;
+        margin-top: 19px;
+        font-size: 24px;
+    }
 
-        img {
-            margin-top: 85px;
-            margin-right: 20px;
-            padding-right: 20px;
-            height: 150px;
-        }
+    img {
+        width: 60px;
+        height: 50px;
+        margin-top: -12px;
     }
 
     a {
         font-weight: bold;
+        color: #f5f5f5;
     }
 
     aside {
         display: flex;
-        align-items: center;
+        margin-top: 19px;
     }
 `;
 
@@ -47,16 +47,19 @@ export const Profile = styled.div`
 
         strong {
             display: block;
+            color: #223;
         }
 
         a {
             display: block;
             margin-top: 2px;
             font-size: 12px;
+            color: #999;
         }
     }
 
     img {
+        margin-top: 0px;
         height: 32px;
         width: 32px;
         border-radius: 50%;

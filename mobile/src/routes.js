@@ -43,7 +43,7 @@ export default (signedIn = false) =>
                 navigationOptions: {
                   // faz a tabBar sumir ao clickar
                   tabBarVisible: false,
-                  tabBarLabel: 'Agendar',
+                  tabBarLabel: 'Booking',
                   tabBarIcon: (
                     <Icon
                       name="add-circle-outline"
@@ -62,7 +62,9 @@ export default (signedIn = false) =>
             activeTintColor: '#FFF',
             inactiveTintColor: 'rgba(255,255,255, 0.7)',
             style: {
-              backgroundColor: '#FC0061',
+              backgroundColor: 'rgba(50,47,58,9)',
+
+
             },
           },
         }

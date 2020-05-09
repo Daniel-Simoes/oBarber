@@ -43,7 +43,7 @@ import { Container, Title, List } from './styles';
   <Background>
     <Container>
       <Title>
-        Schedules
+        Appointments
       </Title>
       <List
       data={appointments}
@@ -56,7 +56,7 @@ import { Container, Title, List } from './styles';
   }
 
   Dashboard.navigationOptions = {
-    tabBarLabel: 'Schedules',
+    tabBarLabel: 'Appointments',
     tabBarIcon: ({ tintColor }) => (
       <Icon name="event" size={20} color={tintColor} />
   ),
