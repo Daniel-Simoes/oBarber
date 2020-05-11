@@ -1,5 +1,4 @@
 import styled from 'styled-components/native';
-
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
@@ -15,7 +14,7 @@ export const Separator = styled.View`
 
 export const LogoutButton = styled(Button)`
   margin-top: 10px;
-  background: #1fc9FD;
+  background: #036885;
 `;
 
 export const Title = styled.Text`
